@@ -20,3 +20,6 @@ $ source env/bin/active
 
 #退出虚拟环境
 $ deactivate
+
+#启动服务
+$ python run.py
