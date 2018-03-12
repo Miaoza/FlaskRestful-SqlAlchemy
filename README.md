@@ -2,7 +2,7 @@
 #install by requirements.txt
 $ pip install -r requirements.txt
 
-#creare or update requirements.txt 
+#creare or update requirements.txt
 $ pip freeze > requirements.txt   
 
 #安装virtualenv
@@ -23,3 +23,22 @@ $ deactivate
 
 #启动服务
 $ python run.py
+
+#进入MySql shell命令行
+$ mysql -u root -p
+password: your password
+
+#查看已创建数据库
+-> show databases;
+
+#创建新数据库
+-> create database db_name;
+
+#删除数据库
+-> drop database db_name;
+
+#使用数据库
+-> use db_name;
+
+#退出mysql命令行
+-> quit

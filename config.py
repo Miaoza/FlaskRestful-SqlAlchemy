@@ -8,15 +8,15 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshiwo@localhost/purchasedb?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshiwo@localhost/dva_db?charset=utf8'
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshiwo@localhost/purchasedb?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshiwo@localhost/dva_db?charset=utf8'
 
 class TestingConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshiwo@localhost/purchasedb?charset=utf8'	
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:woshiwo@localhost/dva_db?charset=utf8'	
 
 
 config = {
