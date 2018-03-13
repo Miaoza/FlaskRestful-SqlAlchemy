@@ -5,13 +5,14 @@
 # @Last Modified time: 2018-01-26 17:13:08
 
 from app.user.model import User
-from app.organ.model import Organ
-from app.purchase.model import *
+# from app.organ.model import Organ
+# from app.purchase.model import *
 
-
-from app import db
 from flask_sqlalchemy import SQLAlchemy
+from app import db
 
+
+# print(s)
 db.drop_all()
 db.create_all()
 

@@ -42,3 +42,8 @@ password: your password
 
 #退出mysql命令行
 -> quit
+
+#error
+如果执行$ python create.py
+抛出错误：sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno -2] Name or service not known)")
+将config.py 中 localhost 改成 127.0.0.1

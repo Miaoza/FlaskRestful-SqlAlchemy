@@ -24,10 +24,10 @@ class Login(Resource):
         if user and user.check_password(pwd):
             user.token = user.generate_auth_token() #token
             user = marshal(user, user_fields)
-            return jsonify({"code": 0, "data": user})
+            return jsonify({"code": 1, "data": user})
         else:
-            return jsonify({"code": -1, "message": "账号或密码错误"}) 
-        
+            return jsonify({"code": -1, "message": "账号或密码错误"})
+
 class Users(Resource):
     @required_auth
     def get(self):
@@ -38,7 +38,7 @@ class Users(Resource):
         for user in users:
             user.token = user.generate_auth_token()
         users = marshal(users, user_fields)
-        return jsonify({"code": 0, "data": users})
+        return jsonify({"code": 1, "data": users})
 
     @required_auth
     def post(self):
@@ -57,7 +57,7 @@ class Users(Resource):
         except:
             return jsonify({"code": -1, "message": "添加失败"})
         else:
-            return jsonify({"code": 0, "message": "添加成功"})
+            return jsonify({"code": 1, "message": "添加成功"})
 
 class UserView(Resource):
     @required_auth
@@ -67,7 +67,7 @@ class UserView(Resource):
             return jsonify({"code": -1, "message": "用户不存在"})
         user.token = user.generate_auth_token() #token
         user = marshal(user, user_fields)
-        return jsonify({"code": 0, "data": user})
+        return jsonify({"code": 1, "data": user})
 
     @required_auth
     def put(self, user_id):
@@ -87,7 +87,7 @@ class UserView(Resource):
         except:
             return jsonify({"code": -1, "message": "修改失败"})
         else:
-            return jsonify({"code": 0, "message": "已修改"})
+            return jsonify({"code": 1, "message": "已修改"})
 
     @required_auth
     def delete(self, user_id):
@@ -100,7 +100,7 @@ class UserView(Resource):
         except:
             return jsonify({"code": -1, "message": "删除失败"})
         else:
-            return jsonify({"code": 0, "message": "已删除"})
+            return jsonify({"code": 1, "message": "已删除"})
 
 class Me(Resource):
     @required_auth
@@ -109,7 +109,7 @@ class Me(Resource):
         me = User.verify_auth_token(auth.username)
         me.token = me.generate_auth_token() #token
         me = marshal(me, user_fields)
-        return jsonify({"code": 0, "data": me})
+        return jsonify({"code": 1, "data": me})
 
     @required_auth
     def put(self):
@@ -132,12 +132,11 @@ class Me(Resource):
             me = User.verify_auth_token(auth.username)
             me.token = me.generate_auth_token() #token
             me = marshal(me, user_fields)
-            return jsonify({"code": 0, "data": me})
+            return jsonify({"code": 1, "data": me})
 
 class OrganUsers(Resource):
     @required_auth
     def get(self):
         user = User.query.filter(User.role=='organ').all()
         user = marshal(user, user_fields)
-        return jsonify({"code": 0, "data": user})
-        
+        return jsonify({"code": 1, "data": user})
