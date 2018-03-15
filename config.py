@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-# @Author: nianko
-# @Date:   2018-01-18 17:06:35
-# @Last Modified by:   nianko
-# @Last Modified time: 2018-01-18 18:35:27
+# @Author: Nianko <nianko>
+# @Date:   2018-03-15T12:14:57+08:00
+# @Last modified by:   nianko
+# @Last modified time: 2018-03-15T12:24:31+08:00
+
 
 class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False

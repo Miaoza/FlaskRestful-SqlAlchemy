@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-# @Author: nianko
-# @Date:   2018-01-20 16:06:22
-# @Last Modified by:   nianko
-# @Last Modified time: 2018-01-20 16:10:28
-# 
+# @Author: Nianko <nianko>
+# @Date:   2018-03-07T11:46:32+08:00
+# @Last modified by:   nianko
+# @Last modified time: 2018-03-15T12:26:32+08:00
+
+
 from upload import *
 
 up_api.add_resource(Uploads, '/uploads')

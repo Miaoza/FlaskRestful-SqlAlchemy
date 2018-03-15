@@ -47,3 +47,8 @@ password: your password
 如果执行$ python create.py
 抛出错误：sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno -2] Name or service not known)")
 将config.py 中 localhost 改成 127.0.0.1
+
+#error SyntaxError: Non-ASCII character '\xe8' in file
+这里提示语法错误
+因为没有指定文件的编码，默认情况下不能用中文
+python 文件头加入： #-*- coding: utf-8 -*-
