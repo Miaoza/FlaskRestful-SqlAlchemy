@@ -2,7 +2,7 @@
 #install by requirements.txt
 $ pip install -r requirements.txt
 
-#creare or update requirements.txt
+#creae or update requirements.txt
 $ pip freeze > requirements.txt   
 
 #安装virtualenv
