@@ -16,7 +16,7 @@ enter 虚拟环境
 evn   虚拟环境名称
 进入虚拟环境目录
 #####
-$ source env/bin/active
+$ source env/bin/activate
 
 #退出虚拟环境
 $ deactivate
